@@ -15,6 +15,10 @@
 	<p>Volkswagen Jetta</p>
 </div>
 	<div id="header">
+		<?php if (is_active_sidebar( 'inHeader' ) ) : ?>
+		<?php dynamic_sidebar( 'inHeader' ); ?>
+		<?php endif; ?>
+		Лалал
 	</div>
 <div style = 'clear:both;'></div>
 
@@ -61,4 +65,3 @@ $menu = str_replace('class="menu-item', 'class="menu-item menu', $menu );
 echo $menu;
 ?> 
 </div>
-
