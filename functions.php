@@ -1,0 +1,55 @@
+<?php
+
+
+/**
+* Подключение меню
+**/
+register_nav_menus( array(
+  'main-menu' => __( 'main-menu' )
+));
+
+/**
+* Подключение сайдбаров
+**/
+function my_register_sidebars() {
+	register_sidebar( array(
+	  'name' => __( 'Первая колонка' ),
+	  'id' => 'sidebar1',
+	  'description' => 'Сайдбар 1.',
+	  'before_widget' => '<div class = "sidebar">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<div class = "widget-title">',
+	  'after_title' => '</div>',
+	));
+	register_sidebar( array(
+	  'name' => __( 'Вторая колонка' ),
+	  'id' => 'sidebar2',
+	  'description' => 'Сайдбар 2.',
+	  'before_widget' => '<div class = "sidebar">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<div class = "widget-title">',
+	  'after_title' => '</div>',
+	));
+
+}
+add_action( 'widgets_init', 'my_register_sidebars' );
+
+/**
+* Функции вывода анонса поста (цитаты) на главной
+**/
+/*
+function new_excerpt_length( $length ) {
+  return 55;//количество выводимых символов анонса (по умолчанию 55)
+}
+add_filter( 'excerpt_length', 'new_excerpt_length' );
+*/
+/**
+* Функции заменяет «[…]» на «...» в конце цитаты
+**/
+/*
+function new_excerpt_more( $more ) {
+  return '...';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+*/
+?>

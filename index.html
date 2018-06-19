@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<title></title>
+
+<body>
+
+	<div id="logo"><img src='logo.png'>
+		<p>Volkswagen Jetta</p>
+	</div> 
+	
+	<div id="header">хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер хэдер  
+	</div>
+	
+	<a id='toggleMenu'>&#9776;</a>
+	<div id='menu'> 
+			<p>Навигация:</p>
+			<p><a href=''>Пункт 1</a></p>
+			<p><a href=''>Пункт 2</a></p>
+			<p><a href=''>Пункт 3</a></p>
+	</div>
+
+	<script>
+	$("#toggleMenu").click(function() {
+	  $("#menu").toggle();
+	});
+	</script>
+	
+	<div style='clear:both'></div>
+
+	<!-- начало блока контент -->
+	<div id="content">
+		<script>document.write('<p>Ширина окна:' + document.documentElement.clientWidth + '</p>');</script>
+		
+		<img src='img.jpg'/>
+		
+		<p>А бзац</p>
+		<p>Абзац</p>
+		<p>Абзац</p>
+		<ul>
+		<li>Абзац</li>
+		<li>Абзац</li>
+		<li>Абзац</li>
+		</ul>
+		<p>Абзац</p>
+		<p>Абзац</p>
+		<p>Абзац</p>
+		<p>Абзац</p>
+		<p>Абзац</p>
+	</div>
+	<!-- окончание блока контент -->
+	
+	<div id='sidebar1'>
+		<p>Сайдбар №1</p>
+		<p>Сайдбар №1</p>
+		<p>Сайдбар №1</p>
+		<p>Сайдбар №1</p>
+		<p>Сайдбар №1</p>
+		<p>Сайдбар №1</p>
+		<p>Сайдбар №1</p>
+		<p>Сайдбар №1</p>
+	</div>
+
+	<div id='sidebar2'>
+		<p>Сайдбар №2</p>
+		<p>Сайдбар №2</p>
+		<p>Сайдбар №2</p>
+		<p>Сайдбар №2</p>
+		<p>Сайдбар №2</p>
+		<p>Сайдбар №2</p>
+		<p>Сайдбар №2</p>
+	</div>
+	<div style='clear:both'></div>
+	<div id='footer'>(c) 2018, myFastTemplate</div>
+</body>
+</html>

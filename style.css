@@ -1,0 +1,228 @@
+/*
+Theme Name: myFastWordpressTemplate
+Theme URI: 
+Description: Быстрый адаптивный шаблон для Wordpress
+Version: 1.0
+Author: Александр
+Author URI: 
+*/
+body {
+	max-width:1360px;
+	background:linear-gradient(#aeb9b5, #ffffff);
+
+	font-family:Georgia;
+	padding:5px;
+	border: 2px solid lightgrey;
+	border-radius:5px;
+	margin: 10px auto;
+	}
+	ul {padding:0; margin:0;}
+	#logo {
+		width: 40%;
+		height: 100px;
+		float:left;	
+		background-color:#deecf7;
+		font-size:28px;
+	}
+	#header {
+		width: 60%;
+		height: 100px;
+		float:left;
+		background-color:#deecf7;
+	}
+	#logo img {
+		padding:10px; 
+		float:left; 
+		width:63px; 
+		border:none;
+	}
+
+	#menu {
+		display:block;
+		text-align:left;
+		background:khaki; 
+		font-weight: 700;
+	}
+	#menu ul {display:inline;  color: white;   list-style-image: none;}
+	#menu a:hover { color: yellow;}
+	#menu a {text-decoration:none; color: white; background: slateblue; padding: 4px 4px;}
+	#menu ul li {display:inline; padding-left: 0px;}
+
+	li {
+		list-style-type:none;
+		background: url("wul.png") no-repeat left;
+		padding-left: 20px;
+
+	}	
+	
+	#toggleMenu {
+		display:none;
+		color: white;} 
+	img {
+		display: block;
+		position: relative;
+		width: 98%;
+		margin: 0 1%;
+		border: 1px solid darkblue;
+	}
+	.widget-title {
+		background-color: lightyellow;
+		color: blue;
+		font-size:20px;
+		padding:5px;
+	}
+	.sidebar  {
+	display:block;
+	width:310px;
+	max-width: 320px;
+	padding:10px 5px 5px 10px;
+	float:left;
+	}  
+	.sidebar ul {padding: 10px 0px 0px 0px;}
+
+	.comments {
+	}
+	
+	#footer {background: slateblue; color: white;  padding: 10px 10px;	}
+	
+@media screen and (min-width: 1040px) {
+	#logo {
+		width: 40%;
+		height: 100px;
+		float:left;	
+		background-color:#deecf7;
+		font-size:28px;
+	}
+	#header {
+		width: 60%;
+		height: 100px;
+		float:left;
+		background-color:#deecf7;
+	}
+	/*
+	.menu {display:block; background:khaki; font-weight: 700;}
+	.menu li {display:inline; background: slateblue; color: white;  padding: 3px 3px;}
+	.menu a:hover { color: yellow;}
+	.menu a {text-decoration:none; color: white;}
+	*/
+	#content {
+		padding: 5px;
+		width: 680px;
+		background-color:#fdfdfd;
+		float:left;
+	}	
+}
+
+@media screen and (min-width: 701px) and (max-width: 1039px){
+
+	#logo {
+		width: 38%;
+		height: 100px;
+		float:left;	
+		background-color:#deecf7;
+		font-size:28px;
+		padding: 0% 1%;
+	}
+	#logo img {
+		padding:10px; 
+		float:left; 
+		width:63px; 
+		min-width:63px; 
+		border:none;
+	}
+	
+	#header {
+		width: 58%;
+		height: 100px;
+		float:left;
+		background-color:#deecf7;
+		padding: 0% 1%;
+	}
+	
+	#menu {display:block; background:khaki; font-weight: 700; width: 100%;}
+	#menu p {display:inline; background: slateblue; color: white; padding: 3px 3px;}
+	#menu p {display:inline; background: slateblue; color: white; padding: 3px 3px;}
+	#menu a:hover { color: yellow;}
+	#menu a {text-decoration:none; color: white;}
+	
+	#content {
+	padding: 0% 1%;
+	width: 98%;
+	background-color:#fdfdfd;
+	float:left;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	body {	
+	padding:3px;
+	margin:0px;
+	}
+	
+	img {
+		display:block;
+		padding: 0% 1%;
+		width: 98%;
+		border: 1px solid darkblue;
+		position:relative;
+		margin: 0 auto;
+	}
+	
+	#logo {
+		height: 100px;
+		padding: 0% 1%;
+		width: 98%;
+		background-color:#deecf7;
+		background-repeat: no-repeat;
+		font-size:28px;
+	}
+	
+	#logo img {
+		padding:10px; 
+		float:left; 
+		width:63px; 
+		min-width:63px; 
+		border:none;
+	}
+	
+	#header {
+		height: 100px;
+		padding: 0% 1%;
+		width: 98%;
+		background-color:#deecf7;
+	}
+
+	#toggleMenu {
+		font-size: 28px;	
+		text-align:center;	
+		display:block;		
+		background-color:slateblue;	
+		color:khaki;
+	}
+	
+		#menu {
+		font-size: 22px;
+		border: 1px blue solid;
+		background: lightblue;
+		opacity: 0.9;
+		color: white;
+		padding-left: 10px;
+		display:none;
+	}
+
+	#menu {background:slateblue; font-weight: 700;}
+	#menu p {background: slateblue; color: white; margin: 0px 3px; padding: 3px 3px; text-transform:lowercase;}
+	#menu a:hover { color: khaki;}
+	#menu a {text-decoration:none; color: white;display:list-item;}
+
+	#content {
+		padding: 3px;
+		background-color:#fdfdfd;
+	}
+
+	#sidebar1, #sidebar2  {
+		width:320px;
+		padding:3px;
+		float:none;
+	} 
+}
