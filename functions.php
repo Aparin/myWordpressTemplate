@@ -10,9 +10,9 @@ register_nav_menus( array(
 function my_register_sidebars() {
 	register_sidebar( array(
 	  'name' => __( 'В шапке' ),
-	  'id' => 'inHeader',
+	  'id' => 'inheader',
 	  'description' => 'Правая часть шапки.',
-	  'before_widget' => '<div>',
+	  'before_widget' => '<div style = "display: block">',
 	  'after_widget' => '</div>',
 	  'before_title' => '<div>',
 	  'after_title' => '</div>',

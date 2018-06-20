@@ -6,84 +6,152 @@ Version: 1.0
 Author: Александр
 Author URI: 
 */
-body {
-	max-width:1360px;
-	background:linear-gradient(#aeb9b5, #ffffff);
-
-	font-family:Georgia;
-	padding:5px;
-	border: 2px solid lightgrey;
-	border-radius:5px;
-	margin: 10px auto;
-	}
-	ul {padding:0; margin:0;}
-	#logo {
+/* сброс стилей браузеров */
+*	{
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+	/* border: 0 none; - скрывает hr */
+	} 
+/* Хэдер */
+#logo {
 		width: 40%;
 		height: 100px;
 		float:left;	
 		background-color:#deecf7;
 		font-size:28px;
 	}
-	#header {
+#logo img {
+		padding: 10px; 
+		float: left; 
+		width: 63px; 
+		height: 64px;
+		border: none;
+	}
+.headline {
+	height: 100px;
+	line-height: 100px;
+}
+#header {
 		width: 60%;
 		height: 100px;
 		float:left;
 		background-color:#deecf7;
 	}
-	#logo img {
-		padding:10px; 
-		float:left; 
-		width:63px; 
-		border:none;
-	}
+/* End of Header */
 
-	#menu {
-		display:block;
-		text-align:left;
-		background:khaki; 
+/* Menu */
+.menu {
+		margin: 5px 0px 0px 0px;
+		display: block;
+		text-align: left;
+		background: khaki; 
 		font-weight: 700;
+		z-index: 10;
 	}
-	#menu ul {display:inline;  color: white;   list-style-image: none;}
-	#menu a:hover { color: yellow;}
-	#menu a {text-decoration:none; color: white; background: slateblue; padding: 4px 4px;}
-	#menu ul li {display:inline; padding-left: 0px;}
+.menu ul {display:inline;  color: white;   list-style-image: none;}
+.menu a:hover { color: yellow; opacity: 1;}
+.menu a {text-decoration:none; color: white; background: slateblue; padding: 4px 4px;}
+.menu ul li {display:inline; padding-left: 0px;}
 
-	li {
-		list-style-type:none;
-		background: url("wul.png") no-repeat left;
-		padding-left: 20px;
-
-	}	
-	
-	#toggleMenu {
+#toggleMenu {	/* меню мобильной версии скрыто по умолчанию */	
 		display:none;
-		color: white;} 
-	img {
+		color: white;
+		z-index: 10;
+} 
+/* End of Menu */
+
+/* Basic settings */
+body {
+	max-width:1360px;
+	vertical-align: middle;
+	background:linear-gradient(#f2f2f2, #ffffff);
+	font-family: Georgia, serif;
+	font-size: 18px;
+	padding: 5px;
+	border: 2px solid lightgrey;
+	border-radius:5px;
+	margin: 10px auto;
+	}
+h1, h2, h3, h4 {
+	font-weight: 700;
+	margin: 10px;
+}
+h1 {
+	font-size: 28px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 22px;
+}
+h4 {
+	font-size: 20px;
+}
+p {
+	margin: 10px 0px;
+}
+
+ul {padding: 0; margin: 10px;}
+li {
+	list-style-type: none;
+	background: url("wul.png") no-repeat left; 
+	padding: 5px 0px 0px 30px;
+	}	
+img {
 		display: block;
 		position: relative;
 		width: 98%;
-		margin: 0 1%;
+		height: 98%;
+		margin: 10px 1%;
 		border: 1px solid darkblue;
+		z-index: 1;
 	}
-	.widget-title {
-		background-color: lightyellow;
-		color: blue;
-		font-size:20px;
-		padding:5px;
+blockquote {
+	border-left: 4px solid slateblue;
+	padding-left: 10px;
+	margin: 10px 10px 10px 30px;
+}
+
+/* comments */
+.comments {
 	}
-	.sidebar  {
+.comments img {
+	width: 80px;
+	height: 80px;
+	float: left;
+	}
+.comments li {background: none; margin: 10px; padding: 5px; border: 1px LightGrey dotted;}
+label {display:block;}
+textarea {width: 95%;}
+
+/* sidebars */
+.sidebar  {
 	display:block;
 	width:310px;
 	max-width: 320px;
 	padding:10px 5px 5px 10px;
 	float:left;
 	}  
-	.sidebar ul {padding: 10px 0px 0px 0px;}
-
-	.comments {
+.sidebar ul {padding: 10px 0px 0px 0px;}
+.widget-title {
+		background-color: lightyellow;
+		color: darkblue;
+		font-size:20px;
+		padding:5px;
 	}
-	
-	#footer {background: slateblue; color: white;  padding: 10px 10px;	}
+/* search form */
+.search-submit {	
+	padding: 0px 3px;
+	color: grey;
+}
+
+#footer {background: slateblue; color: white;  padding: 10px 10px;	}
 	
 @media screen and (min-width: 1040px) {
 	#logo {
@@ -163,9 +231,11 @@ body {
 		display:block;
 		padding: 0% 1%;
 		width: 98%;
+		height: 98%;
 		border: 1px solid darkblue;
 		position:relative;
 		margin: 0 auto;
+		z-index: 1;
 	}
 	
 	#logo {
@@ -182,6 +252,7 @@ body {
 		float:left; 
 		width:63px; 
 		min-width:63px; 
+		height: 64px;
 		border:none;
 	}
 	
@@ -194,27 +265,46 @@ body {
 
 	#toggleMenu {
 		font-size: 28px;	
-		text-align:center;	
-		display:block;		
-		background-color:slateblue;	
-		color:khaki;
+		text-align: center;	
+		display: block;		
+		background-color: slateblue;	
+		color: yellow;
 	}
 	
-		#menu {
+	.menu {
 		font-size: 22px;
-		border: 1px blue solid;
+		/* border: 1px blue solid; */
 		background: lightblue;
 		opacity: 0.9;
 		color: white;
 		padding-left: 10px;
-		display:none;
+		display: none;
 	}
 
-	#menu {background:slateblue; font-weight: 700;}
-	#menu p {background: slateblue; color: white; margin: 0px 3px; padding: 3px 3px; text-transform:lowercase;}
-	#menu a:hover { color: khaki;}
-	#menu a {text-decoration:none; color: white;display:list-item;}
-
+	.fixedPhoneMenu {
+		font-size: 22px;
+		/* border: 1px blue solid; */
+		background: lightblue;
+		opacity: 0.9;
+		color: white;
+		padding-left: 10px;
+		position:fixed;
+		border: 2px red solid;
+		top: 5px;
+		left: 30px;
+	}
+	.menu {background:slateblue; font-weight: 700;}
+	.menu p {background: slateblue; color: white; margin: 0px 3px; padding: 3px 3px; text-transform: lowercase;}
+	.menu a:hover { color: khaki;}
+	.menu a {text-decoration: none; color: white; display: list-item;}
+	.menu ul {display: list-item;}
+	
+	.fixedPhoneMenu {background:slateblue; font-weight: 700;}
+	.fixedPhoneMenu p {background: slateblue; color: white; margin: 0px 3px; padding: 3px 3px; text-transform: lowercase;}
+	.fixedPhoneMenu a:hover {color: khaki;}
+	.fixedPhoneMenu a {text-decoration: none; color: white; display: list-item;}
+	.fixedPhoneMenu ul {display: list-item;}
+	
 	#content {
 		padding: 3px;
 		background-color:#fdfdfd;

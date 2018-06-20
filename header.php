@@ -5,20 +5,21 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php wp_get_document_title(); ?></title>
 	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
-<!--	<script acync src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<!--	<script acync src="/wp-content/themes/myWordpressTemplate/script.js"></script>  -->
 	<?php wp_head(); ?>
 </head>
 <body>	
 
 <div id="logo">
 	<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/logo.png" style='padding:10px; float:left;'></a>
-	<p>Volkswagen Jetta</p>
+	<div class="headline">Volkswagen Jetta</div>
 </div>
-	<div id="header">
-		<?php if (is_active_sidebar( 'inHeader' ) ) : ?>
-		<?php dynamic_sidebar( 'inHeader' ); ?>
+	<div id="header">	
+		<?php if ( is_active_sidebar( 'inheader' ) ) : ?>
+		<?php dynamic_sidebar( 'inheader' ); ?>
 		<?php endif; ?>
-		Лалал
+		<script>
+		//document.writeln(document.body.clientWidth);</script>
 	</div>
 <div style = 'clear:both;'></div>
 
@@ -27,16 +28,11 @@
 <script>
 	var flag = 0;
 	function toggle() {
-		if (flag == 0) { document.getElementById('menu').style.display='block'; flag = 1; }
+		if (flag == 0) {document.getElementById('menu').style.display='block'; flag = 1; }
 		else {document.getElementById('menu').style.display='none'; flag = 0; }
 	}
-	/*
-	$("#toggleMenu").click(function() {
-	$("#menu").toggle();
-	});
-	*/
 </script>
-<div id="menu">
+<div class = "menu" id = "menu">
 <?php
 $args = array(
   'theme_location' => 'main-menu',
@@ -59,9 +55,19 @@ $args = array(
 // wp_nav_menu( $args );
 // получаем а не выводим меню
 $menu = wp_nav_menu( array( 'echo' => 0, ) );
-// добавляем ко всем пунктам класс my__class
+// добавляем ко всем пунктам класс menu-item
 $menu = str_replace('class="menu-item', 'class="menu-item menu', $menu );
 // выводим на экран
 echo $menu;
 ?> 
 </div>
+<script>
+	/* фиксированное меню
+	if (document.body.clientWidth > 700) {
+	var el = document.getElementById('menu');
+	} else {
+	var el = document.getElementById('toggleMenu');
+	}
+	scrollFloat.init(el);
+	*/
+</script>
