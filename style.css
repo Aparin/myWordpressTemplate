@@ -19,7 +19,7 @@ Author URI:
 	} 
 /* Хэдер */
 #logo {
-		width: 40%;
+		width: 30%;
 		height: 100px;
 		float:left;	
 		background-color:#deecf7;
@@ -37,7 +37,7 @@ Author URI:
 	line-height: 100px;
 }
 #header {
-		width: 60%;
+		width: 70%;
 		height: 100px;
 		float:left;
 		background-color:#deecf7;
@@ -170,14 +170,14 @@ textarea {width: 95%;}
 	
 @media screen and (min-width: 1040px) {
 	#logo {
-		width: 40%;
+		width: 27%;
 		height: 100px;
 		float:left;	
 		background-color:#deecf7;
 		font-size:28px;
 	}
 	#header {
-		width: 60%;
+		width: 73%;
 		height: 100px;
 		float:left;
 		background-color:#deecf7;
@@ -254,7 +254,7 @@ textarea {width: 95%;}
 	}
 	
 	#logo {
-		height: 100px;
+		height: auto;
 		padding: 0% 1%;
 		width: 98%;
 		background-color:#deecf7;
@@ -272,7 +272,7 @@ textarea {width: 95%;}
 	}
 	
 	#header {
-		height: 100px;
+		height:  auto;
 		padding: 0% 1%;
 		width: 98%;
 		background-color:#deecf7;
