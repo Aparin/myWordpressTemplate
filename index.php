@@ -35,7 +35,7 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php global $post;	setup_postdata( $post );  $parts = get_extended( $post->post_content ); ?>
 			<h2><?php the_title(); ?></h2>
-			<?php echo $parts['main']; // часть до тега more ?> 
+			<?php echo do_shortcode($parts['main']); // часть до тега more ?>
 			<p style = 'text-align:right; padding-right:10px;'><a style = 'font-weight: bold;' href="<?php the_permalink(); ?>">Читать далее</a></p>
 		<?php endwhile; ?>
 		<?php else: ?>
