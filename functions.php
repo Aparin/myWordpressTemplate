@@ -10,8 +10,35 @@ register_nav_menus( array(
 function my_register_sidebars() {
 	register_sidebar( array(
 	  'name' => __( 'В шапке' ),
-	  'id' => 'inheader',
+	  'id' => 'in_header',
 	  'description' => 'Правая часть шапки.',
+	  'before_widget' => '<div style = "display: block">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<div>',
+	  'after_title' => '</div>',
+	));
+	register_sidebar( array(
+	  'name' => __( 'Перед заголовком' ),
+	  'id' => 'before_headline',
+	  'description' => 'Перед заголовком',
+	  'before_widget' => '<div style = "display: block">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<div>',
+	  'after_title' => '</div>',
+	));
+	register_sidebar( array(
+	  'name' => __( 'После заголовка' ),
+	  'id' => 'after_headline',
+	  'description' => 'После заголовка',
+	  'before_widget' => '<div style = "display: block">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<div>',
+	  'after_title' => '</div>',
+	));
+	register_sidebar( array(
+	  'name' => __( 'Низ контента' ),
+	  'id' => 'bottom_content',
+	  'description' => 'Низ контента',
 	  'before_widget' => '<div style = "display: block">',
 	  'after_widget' => '</div>',
 	  'before_title' => '<div>',

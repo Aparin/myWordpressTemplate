@@ -15,8 +15,8 @@
 	<div class="headline">Volkswagen Jetta</div>
 </div>
 	<div id="header">	
-		<?php if ( is_active_sidebar( 'inheader' ) ) : ?>
-		<?php dynamic_sidebar( 'inheader' ); ?>
+		<?php if ( is_active_sidebar( 'in_header' ) ) : ?>
+		<?php dynamic_sidebar( 'in_header' ); ?>
 		<?php endif; ?>
 		<script>
 		//document.writeln(document.body.clientWidth);</script>
