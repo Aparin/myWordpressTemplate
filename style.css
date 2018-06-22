@@ -1,8 +1,8 @@
 /*
-Theme Name: myFastWordpressTemplate_1.1
+Theme Name: myFastWordpressTemplate
 Theme URI: 
 Description: Быстрый адаптивный шаблон для Wordpress
-Version: 1.1
+Version: 1.3
 Author: Александр
 Author URI: 
 */
@@ -98,12 +98,12 @@ p {
 }
 
 ul {
-	 /* list-style-image: url("wul.png"); */
+	 /* list-style-image: url("images/wul.png"); */
 	padding: 0; margin: 10px;
 }
 li {
 	list-style-type: none;
-	background: url("wul.png") no-repeat left center; 
+	background: url("images/wul.png") no-repeat left center; 
 	background-position: 0px 7px;
 	padding: 5px 0px 0px 25px;
 	}	

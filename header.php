@@ -18,14 +18,12 @@
 		<?php if ( is_active_sidebar( 'in_header' ) ) : ?>
 		<?php dynamic_sidebar( 'in_header' ); ?>
 		<?php endif; ?>
-		<script>
-		//document.writeln(document.body.clientWidth);</script>
 	</div>
 <div style = 'clear:both;'></div>
 
-<!-- <a id='toggleMenu'>&#9776;</a> -->
 <a id="toggleMenu" onclick="toggle();">&#9776;</a>
 <script>
+
 	var flag = 0;
 	function toggle() {
 		if (flag == 0) {document.getElementById('menu').style.display='block'; flag = 1; }
@@ -62,6 +60,7 @@ echo $menu;
 ?> 
 </div>
 <script>
+	
 	/* фиксированное меню
 	if (document.body.clientWidth > 700) {
 	var el = document.getElementById('menu');
